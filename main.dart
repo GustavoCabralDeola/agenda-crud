@@ -110,12 +110,18 @@ void menu(){
       stdout.writeln('Digite o telefone para contato');
       int telefone = int.parse(stdin.readLineSync()!);
 
-      if(telefone == 0) {
+      if(telefone == 0){
          stdout.writeln('telefone não pode ser 0');
+      } else if (telefone.isNegative) {
+         stdout.writeln('telefone não pode ser negativo');
       }
 
       stdout.writeln('Digite o email para contato');
       String email = stdin.readLineSync()!;
+
+      if(email.isEmpty){
+        stdout.writeln('Email não pode ser vazio');
+      }
 
       email = validaEmail(email);
       telefone = validaTelefone(telefone);
