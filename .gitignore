@@ -1,0 +1,1 @@
+.dart_tool/\n.packages\n.pub-cache/\n.buildlog/\n.idea/\n.vs/\nandroid/.gradle/\nandroid/app/*.iml\nbuild/\nios/Pods/\nios/Flutter/ephemeral/\n*.iml\n*.log\npubspec.lock\n
