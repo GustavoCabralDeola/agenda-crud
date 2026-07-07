@@ -220,7 +220,7 @@ void removerContato() {
 
 }
 
-carregarArquivo() {
+void carregarArquivo() {
   final List<String> linhas = File('file.txt').readAsLinesSync();
   for (int i = 0; i < linhas.length; i++) {
     final List<String> campos = linhas[i].split(';');
@@ -235,7 +235,7 @@ carregarArquivo() {
   }
 }
  
-salvarArquivo() {
+void salvarArquivo() {
   final List<String> linhas = [];
   for (int i = 0; i < listaContatos.length; i++) {
     linhas.add(
