@@ -363,6 +363,12 @@ void carregarArquivo() {
         '${_listaContatos[i].telefone} |'
         '${_listaContatos[i].email} |',
       );
+      
+      if (_listaContatos[i] is ContatoPessoal) {
+        linhas[i] += (_listaContatos[i] as ContatoPessoal).apelido ?? '';
+      } else if (_listaContatos[i] is ContatoEmpresarial) {
+        linhas[i] += (_listaContatos[i] as ContatoEmpresarial).empresa ?? '';
+      }
     }
     File('file.txt').writeAsStringSync(linhas.join('\n'));
     print('Arquivo salvo com sucesso!');
